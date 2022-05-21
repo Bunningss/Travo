@@ -1,0 +1,58 @@
+@import '../../global.scss';
+
+.hero {
+    height: 100%;
+    background: url('https://images.pexels.com/photos/746386/pexels-photo-746386.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    .heroContainer {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        animation: reveal 1s both;
+
+        .title {
+            text-align: center;
+            font-size: 70px;
+            font-weight: 800;
+            color: var(--font);
+            text-transform: uppercase;
+            text-shadow: -3px 1px 9px rgba(0,0,0,0.66);
+
+            @include laptopSml {
+                font-size: 50px;
+            }
+
+            @include mobile {
+                font-size: 28px;
+            }
+        }
+
+        .subtitle {
+            font-size: 40px;
+            color: var(--font);
+            font-weight: 600;
+            margin: 20px 0;
+            text-shadow: -3px 1px 9px rgba(0,0,0,0.66);
+
+            @include laptopSml {
+                font-size: 30px;
+            }
+
+            @include mobile {
+                font-size: 18px;
+            }
+        }
+
+        .buttonContainer {
+            display: flex;
+            gap: 20px;
+            margin: 20px 0;
+        }
+    }
+}

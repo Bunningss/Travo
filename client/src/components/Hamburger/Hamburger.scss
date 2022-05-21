@@ -1,0 +1,46 @@
+@import '../../global.scss';
+
+.hamburger {
+    width: 20px;
+    height: 15px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    animation: reveal 1s both;
+
+    @include mobile {
+        display: flex;
+    }
+
+    &.active {
+
+        .line:nth-child(1) {
+            transform: rotate(45deg) translate(-2px,8px);
+            transform-origin: center;
+        }
+        .line:nth-child(3) {
+            transform: rotate(45deg) translate(-4px, .5px);
+            transform-origin: center;
+        }
+        .line:nth-child(2) {
+            transform: rotate(-45deg) translate(-2px,-2px);
+        }
+    }
+
+    .line {
+        background-color: #fff;
+        height: 2px;
+        transition: all .3s ease;
+
+        &:nth-child(1) {
+            width: 75%;
+        }
+        &:nth-child(2) {
+            width: 100%;
+        }
+        &:nth-child(3) {
+            width: 50%;
+        }
+    }
+}

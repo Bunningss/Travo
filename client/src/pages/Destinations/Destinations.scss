@@ -1,0 +1,47 @@
+@import '../../global.scss';
+.desti {
+    margin: 40px 0;
+    padding: 0 60px;
+
+    @include mobile {
+        padding: 0 20px;
+    }
+
+    @include tinyP {
+        padding: 0 10px;
+    }
+
+    .destiHeader {
+        text-align: center;
+        margin: 25px 0;
+        text-decoration: underline crimson;
+        font-size: 24px;
+        font-weight: 500;
+
+        @include mobile {
+            font-size: 18px;
+        }
+    }
+
+    .cardContainer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 5px;
+
+        @include mobile {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .card:nth-child(1) {
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+
+        .card:nth-child(5) {
+            grid-area: 2 / 1;
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+    }
+}

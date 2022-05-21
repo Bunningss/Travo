@@ -1,0 +1,87 @@
+@import '../../global.scss';
+.topbar {
+    height: 60px;
+    padding: 0 60px;
+    background-color: var(--background);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 6;
+    transition: all 1s ease;
+    animation: opacity 2s both;
+
+    @include mobile {
+        padding: 0 20px;
+    }
+
+
+    .topbarLeft {
+        animation: reveal 1s both;
+
+        .logoContainer {
+            color: var(--font);
+
+            .logo {
+                text-transform: capitalize;
+                text-decoration: underline crimson;
+            }
+        }
+    }
+
+    .topbarRight {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        animation: reveal 1s both;
+
+        @include mobile {
+            display: none;
+        }
+
+        .topbarList {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            a {
+                color: var(--font);
+                transition: all .3s ease;
+                height: 100%;
+
+                &:hover {
+                    border-bottom: 4px solid #fff;
+                }
+
+                .listItem {
+                    font-weight: 500;
+                    height: 100%;
+                    font-size: 16px;
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+            }
+            }
+        }
+
+        .topbarBtn {
+            padding: 10px 20px;
+            border: 2px solid #fff;
+            border-radius: 3px;
+            outline: none;
+            color: var(--font);
+            font-size: 16px;
+            font-weight: 500;
+            text-transform: uppercase;
+            background-color: transparent;
+            cursor: pointer;
+            transition: all .3s ease-in-out;
+
+            &:hover {
+                background-color: var(--light);
+                color: var(--fontDark);
+            }
+        }
+    }
+}
