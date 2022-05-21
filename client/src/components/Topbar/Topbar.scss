@@ -14,6 +14,10 @@
         padding: 0 20px;
     }
 
+    @include tinyP {
+        padding: 0px 10px;
+    }
+
 
     .topbarLeft {
         animation: reveal 1s both;
